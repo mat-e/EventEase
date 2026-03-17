@@ -5,22 +5,24 @@ namespace EventEase.Models
 {
     public class Booking
     {
-        public Booking()
-        {
-                
-        }
+        //public Booking()
+        //{
+
+        //}
         [Key]
+        [Required]
         public int BookingId { get; set; }
         [Required]
-        public DateOnly BookingDate { get; set; }
 
-        //nav for vaue
-        public int VenueId { get; set; }
-        public Venue Venue { get; set; }
+        //nav for venue
 
+        //[ForeignKey("VanueId")]
+        public string? VanueId { get; set; }
+        public Venue? Venue { get; set; }
 
-        //nav for Event
-        public int EventId { get; set; }
-        public Event Event { get; set; }
-    } 
+        public string? EventId { get; set; }
+        public Event? Event { get; set; }
+
+        public DateTime BookingDate { get; set; }
+    }
 }

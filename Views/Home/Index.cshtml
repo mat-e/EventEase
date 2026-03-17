@@ -1,8 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero">
+    <div class="hero-content text-start">
+        <h1 class="hero-title">Discover & manage great local events</h1>
+        <p class="hero-sub">Find venues, create events and manage bookings. Use the navigation to browse venues, events, or create a new booking.</p>
+
+        <div class="hero-ctas">
+            <a class="btn btn-light btn-lg" asp-controller="Events" asp-action="Index">Browse Events</a>
+            <a class="btn btn-outline-light btn-lg" asp-controller="Venues" asp-action="Index">View Venues</a>
+        </div>
+    </div>
+</div>
+
+<div class="app-card">
+    <h2 class="h5 mb-3">Quick links</h2>
+    <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-primary" asp-controller="Events" asp-action="Create">Create Event</a>
+        <a class="btn btn-primary" asp-controller="Venues" asp-action="Create">Create Venue</a>
+        <a class="btn btn-primary" asp-controller="Bookings" asp-action="Create">New Booking</a>
+    </div>
 </div>
