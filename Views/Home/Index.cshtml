@@ -1,24 +1,56 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home Page";
 }
 
-<div class="hero">
-    <div class="hero-content text-start">
-        <h1 class="hero-title">Discover & manage great local events</h1>
-        <p class="hero-sub">Find venues, create events and manage bookings. Use the navigation to browse venues, events, or create a new booking.</p>
-
-        <div class="hero-ctas">
-            <a class="btn btn-light btn-lg" asp-controller="Events" asp-action="Index">Browse Events</a>
-            <a class="btn btn-outline-light btn-lg" asp-controller="Venues" asp-action="Index">View Venues</a>
-        </div>
-    </div>
+<div class="text-center mt-4 mb-5">
+    <h1 class="display-4">Welcome</h1>
+    <h3>Event Easy: Book & Enjoy!</h3>
 </div>
 
-<div class="app-card">
-    <h2 class="h5 mb-3">Quick links</h2>
-    <div class="d-flex gap-2 flex-wrap">
-        <a class="btn btn-primary" asp-controller="Events" asp-action="Create">Create Event</a>
-        <a class="btn btn-primary" asp-controller="Venues" asp-action="Create">Create Venue</a>
-        <a class="btn btn-primary" asp-controller="Bookings" asp-action="Create">New Booking</a>
+<!-- Quick Navigation Legend -->
+<div class="legend-card">
+    <h5 class="legend-title">Quick Navigation</h5>
+    <div class="legend-grid">
+
+        <a asp-controller="Home" asp-action="Index" class="legend-item">
+            <div class="legend-icon">🏠</div>
+            <div class="legend-info">
+                <span class="legend-name">Home</span>
+                <span class="legend-desc">Go to the main page</span>
+            </div>
+        </a>
+
+        <a asp-controller="Venues" asp-action="Index" class="legend-item">
+            <div class="legend-icon">🏟️</div>
+            <div class="legend-info">
+                <span class="legend-name">Venues</span>
+                <span class="legend-desc">Browse & manage venues</span>
+            </div>
+        </a>
+
+        <a asp-controller="Customers" asp-action="Index" class="legend-item">
+            <div class="legend-icon">👥</div>
+            <div class="legend-info">
+                <span class="legend-name">Customers</span>
+                <span class="legend-desc">View & manage customers</span>
+            </div>
+        </a>
+
+        <a asp-controller="Events" asp-action="Index" class="legend-item">
+            <div class="legend-icon">🎉</div>
+            <div class="legend-info">
+                <span class="legend-name">Events</span>
+                <span class="legend-desc">Browse & create events</span>
+            </div>
+        </a>
+
+        <a asp-controller="Bookings" asp-action="Index" class="legend-item">
+            <div class="legend-icon">📋</div>
+            <div class="legend-info">
+                <span class="legend-name">Bookings</span>
+                <span class="legend-desc">Manage all bookings</span>
+            </div>
+        </a>
+
     </div>
 </div>
